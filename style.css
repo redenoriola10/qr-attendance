@@ -1,13 +1,45 @@
+/* General page styling */
 body { 
   font-family: Arial, sans-serif; 
   text-align: center; 
-  padding: 20px; 
-  background-color: pink;
+  padding: 10px; 
+  margin: 0;
+  background: #f7f7f7;
 }
+
+/* Scanner container */
 #reader { 
-  width: 300px; 
+  max-width: 100%; 
+  width: 350px; 
   margin: auto; 
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+/* Status text */
 .log { 
   margin-top: 20px; 
+}
+#status {
+  font-size: 1rem;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Headline */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h2 { font-size: 1.2rem; }
+  #status { font-size: 0.9rem; padding: 8px; }
+  #reader { width: 100%; }
 }
