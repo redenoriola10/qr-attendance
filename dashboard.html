@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Attendance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>📋 Student Registration</h2>
+    <form id="registerForm">
+      <input type="text" id="studentName" placeholder="Student Name" required>
+      <input type="text" id="studentId" placeholder="Student ID" required>
+      <button type="submit">Add Student</button>
+    </form>
+    <div id="qrOutput"></div>
+    <p id="registerStatus"></p>
+
+    <hr>
+
+    <h2>📷 Attendance Scanner</h2>
+    <div id="reader"></div>
+    <p id="scanStatus">Scan a student QR code...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
