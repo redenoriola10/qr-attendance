@@ -2,17 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QR Code Attendance</title>
+  <title>QR Attendance - Login</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
-  <h2>📷 QR Code Attendance</h2>
-  <div id="reader"></div>
-  <div class="log">
-    <p id="status">Scan a QR code...</p>
+  <div class="container">
+    <h2>🔐 Teacher Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginStatus"></p>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const LOGIN_USER = "user";   // change this
+    const LOGIN_PASS = "user";      // change this
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let u = document.getElementById("username").value;
+      let p = document.getElementById("password").value;
+
+      if(u === LOGIN_USER && p === LOGIN_PASS) {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("loginStatus").innerText = "❌ Invalid login";
+      }
+    });
+  </script>
 </body>
 </html>
