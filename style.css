@@ -1,0 +1,13 @@
+body { 
+  font-family: Arial, sans-serif; 
+  text-align: center; 
+  padding: 20px; 
+  background-color: pink;
+}
+#reader { 
+  width: 300px; 
+  margin: auto; 
+}
+.log { 
+  margin-top: 20px; 
+}
