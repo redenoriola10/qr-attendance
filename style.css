@@ -1,45 +1,52 @@
-/* General page styling */
-body { 
-  font-family: Arial, sans-serif; 
-  text-align: center; 
-  padding: 10px; 
-  margin: 0;
+body {
+  font-family: Arial, sans-serif;
   background: #f7f7f7;
+  margin: 0;
+  padding: 0;
 }
-
-/* Scanner container */
-#reader { 
-  max-width: 100%; 
-  width: 350px; 
-  margin: auto; 
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-/* Status text */
-.log { 
-  margin-top: 20px; 
-}
-#status {
-  font-size: 1rem;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Headline */
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
-
-/* Responsive adjustments */
+form {
+  display: flex;
+  flex-direction: column;
+}
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+#reader {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+#qrOutput canvas {
+  margin-top: 15px;
+}
 @media (max-width: 600px) {
+  .container { margin: 10px; padding: 15px; }
   h2 { font-size: 1.2rem; }
-  #status { font-size: 0.9rem; padding: 8px; }
-  #reader { width: 100%; }
+  input, button { font-size: 0.9rem; }
 }
